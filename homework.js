@@ -79,7 +79,7 @@ console.log(Juan);
 function join(wagon, traveler) {
     if (wagon.capacity > 0) { // do not need a loop because it will only happen once
         wagon.passengers.push(traveler); 
-        wagon.capacity -= 1;
+        wagon.capacity -= 1; //takes a passanger spot away after a new traveler is added
         return true;
     } else {
         return false;
@@ -100,7 +100,7 @@ function quarentine(wagon) { //Return true if there is at least one unhealthy pe
             return true;
         }
     }
-    return false; // if this was in the for loop it would have returned false after only one passenger
+    return false; // if this was in the for loop it would have returned false after only one passenger, outside of the loop to run the whole thing
 }
 
 console.log(quarentine(wagon));
@@ -113,7 +113,7 @@ function food(wagon) {
         console.log("passenger: ", i, wagon.passengers[i].amount); 
         console.log("totalFood: ", totalFood); 
     }
-    return totalFood;
+    return totalFood; 
 }
 
 console.log(food(wagon));
